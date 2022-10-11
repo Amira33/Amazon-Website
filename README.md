@@ -1,12 +1,12 @@
 # AmazooonApp
 
->=JDK17 installed
->Maven project 
->Pom.Xml file which has all depenciecies 
->webdrivermanager
-> (chrome)
->Framework : TestNg open source withe annotation (@Test , @BeforeMethod , @afterMethod) 
->tstng.Xml file which has 3 classes of the project to run them and has the <listeners>
+.JDK17 installed
+.Maven project 
+.Pom.Xml file which has all depenciecies 
+.webdrivermanager
+. (chrome)
+.Framework : TestNg open source withe annotation (@Test , @BeforeMethod , @afterMethod) 
+.tstng.Xml file which has 3 classes of the project to run them and has the <listeners>
         <listener class-name="listeners" which used to print the test case fail or pass in the consolo. 
 
 
