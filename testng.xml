@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amazon App Project ">
+    <listeners>
+        <listener class-name="listeners.Listeners">
+
+        </listener>
+    </listeners>
+    <test thread-count="5"    name=" End to End Test ">
+        <classes>
+            <class name="com.AmazonApp.testcases.LoginPageTest">
+            </class>
+
+            <class name="com.AmazonApp.testcases.TodayDealsTest">
+            </class>
+
+            <class name="com.AmazonApp.testcases.AccountLists">
+            </class>
+
+        </classes>
+    </test>
+</suite>

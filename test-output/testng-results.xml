@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-11T13:19:23 EET" name="Amazon App Project " finished-at="2022-10-11T13:21:54 EET" duration-ms="151164">
+    <groups>
+    </groups>
+    <test started-at="2022-10-11T13:19:23 EET" name=" End to End Test " finished-at="2022-10-11T13:21:54 EET" duration-ms="151164">
+      <class name="com.AmazonApp.testcases.AccountLists">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:20:52 EET" name="setUp" finished-at="2022-10-11T13:21:05 EET" duration-ms="13638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountO(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SigninAccountO(java.lang.reflect.Method)[pri:3, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:05 EET" name="SigninAccountO" finished-at="2022-10-11T13:21:14 EET" duration-ms="8650" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountO(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SigninAccountO -->
+        <test-method is-config="true" signature="ShitDown(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:14 EET" name="ShitDown" finished-at="2022-10-11T13:21:17 EET" duration-ms="2440" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountO(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShitDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:17 EET" name="setUp" finished-at="2022-10-11T13:21:26 EET" duration-ms="9893" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountA(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SigninAccountA(java.lang.reflect.Method)[pri:4, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:26 EET" name="SigninAccountA" finished-at="2022-10-11T13:21:34 EET" duration-ms="7240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountA(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SigninAccountA -->
+        <test-method is-config="true" signature="ShitDown(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:34 EET" name="ShitDown" finished-at="2022-10-11T13:21:36 EET" duration-ms="2457" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountA(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShitDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:36 EET" name="setUp" finished-at="2022-10-11T13:21:47 EET" duration-ms="10654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountL(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SigninAccountL(java.lang.reflect.Method)[pri:5, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:47 EET" name="SigninAccountL" finished-at="2022-10-11T13:21:51 EET" duration-ms="4332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountL(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SigninAccountL -->
+        <test-method is-config="true" signature="ShitDown(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.AccountLists@43301423]" started-at="2022-10-11T13:21:51 EET" name="ShitDown" finished-at="2022-10-11T13:21:54 EET" duration-ms="3002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.AccountLists.SigninAccountL(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShitDown -->
+      </class> <!-- com.AmazonApp.testcases.AccountLists -->
+      <class name="com.AmazonApp.testcases.LoginPageTest">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.LoginPageTest@358ee631]" started-at="2022-10-11T13:19:23 EET" name="setUp" finished-at="2022-10-11T13:19:48 EET" duration-ms="24726" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.LoginPageTest.LoginTest(java.lang.reflect.Method) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginTest(java.lang.reflect.Method)[pri:1, instance:com.AmazonApp.testcases.LoginPageTest@358ee631]" started-at="2022-10-11T13:19:48 EET" name="LoginTest" finished-at="2022-10-11T13:19:53 EET" duration-ms="5630" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.LoginPageTest.LoginTest(java.lang.reflect.Method) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="ShitDown(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.LoginPageTest@358ee631]" started-at="2022-10-11T13:19:53 EET" name="ShitDown" finished-at="2022-10-11T13:19:56 EET" duration-ms="2599" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.LoginPageTest.LoginTest(java.lang.reflect.Method) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShitDown -->
+      </class> <!-- com.AmazonApp.testcases.LoginPageTest -->
+      <class name="com.AmazonApp.testcases.TodayDealsTest">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.TodayDealsTest@3c9d0b9d]" started-at="2022-10-11T13:19:56 EET" name="setUp" finished-at="2022-10-11T13:20:08 EET" duration-ms="11482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.TodayDealsTest.TodayDeals(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TodayDeals(java.lang.reflect.Method)[pri:2, instance:com.AmazonApp.testcases.TodayDealsTest@3c9d0b9d]" started-at="2022-10-11T13:20:08 EET" name="TodayDeals" finished-at="2022-10-11T13:20:49 EET" duration-ms="41741" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.TodayDealsTest.TodayDeals(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TodayDeals -->
+        <test-method is-config="true" signature="ShitDown(java.lang.reflect.Method)[pri:0, instance:com.AmazonApp.testcases.TodayDealsTest@3c9d0b9d]" started-at="2022-10-11T13:20:49 EET" name="ShitDown" finished-at="2022-10-11T13:20:52 EET" duration-ms="2597" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.AmazonApp.testcases.TodayDealsTest.TodayDeals(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShitDown -->
+      </class> <!-- com.AmazonApp.testcases.TodayDealsTest -->
+    </test> <!--  End to End Test  -->
+  </suite> <!-- Amazon App Project  -->
+</testng-results>
