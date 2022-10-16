@@ -36,6 +36,7 @@ The screenshots will automatically be taken and stored under build/screenshots. 
 
 <img width="1369" alt="Screen Shot 2022-10-16 at 7 17 47 PM" src="https://user-images.githubusercontent.com/26275018/196049377-8710abcc-7749-4cf2-bca6-b33f899ff68d.png">
 
+![TodayDeals](https://user-images.githubusercontent.com/26275018/196049464-a9900b5f-bc56-4a42-92a2-b66f4906cce9.png)
 
 
 
