@@ -1,5 +1,7 @@
 package com.AmazonApp.testcases;
 
+import Pages.AccountListsPage;
+import Pages.LoginPage;
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import com.AmazonApp.base.TestBase;
@@ -14,12 +16,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import util.TestUtils;
+import com.AmazonApp.testcases.AccountLists;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPageTest extends TestBase {
+
+    LoginPage log = new LoginPage();  //new object to use in class to call the method
+    AccountListsPage Account = new AccountListsPage();
 
     public LoginPageTest() throws IOException {
         super();     // make run constarctor of parent
@@ -46,9 +52,10 @@ public class LoginPageTest extends TestBase {
 
 
 
-        recorder = new ATUTestRecorder("/Users/iAmira/IdeaProjects/AmazonAppProject/Videos", method.getName() , false);
-        recorder.start();
-        driver.findElement(By.xpath("//a[@id='nav-link-accountList']")).click();
+       // recorder = new ATUTestRecorder("/Users/iAmira/IdeaProjects/AmazonAppProject/Videos", method.getName() , false);
+      //  recorder.start();
+       // driver.findElement(By.xpath("//a[@id='nav-link-accountList']"))
+               log.SigninButton() .click();
 
     }
 
@@ -56,7 +63,7 @@ public class LoginPageTest extends TestBase {
     public void ShitDown(Method method)  throws ATUTestRecorderException, IOException{
 
         TestUtils.takeScreenShot(method.getName());   // for screen shot
-        recorder.stop();        // for take video
+       // recorder.stop();        // for take video
         driver.quit();
     }
 
@@ -65,11 +72,11 @@ public class LoginPageTest extends TestBase {
     public void LoginTest(Method method)throws IOException {
 
 
-        WebElement EmailTextBox = driver.findElement(By.name("email"));
-        WebElement continueButton = driver.findElement(By.xpath("//input[@id='continue']"));
+       // WebElement EmailTextBox = driver.findElement(By.name("email"));
+      //  WebElement continueButton = driver.findElement(By.xpath("//input[@id='continue']"));
 
-        EmailTextBox.sendKeys(prop.getProperty("email"));
-        continueButton.click();
+       log.EmailTextBox().sendKeys(prop.getProperty("email"));
+       log.continueButton().click();
 
         // Hard Assertion
         System.out.println("First  Assertion  using Title ");
@@ -87,19 +94,19 @@ public class LoginPageTest extends TestBase {
 //second  assertion using Msg text
       System.out.println("***************************************************");
       System.out.println("second  assertion using Msg text");
-      soft.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'We cannot find an account with that email address')]")).isDisplayed());
+      soft.assertTrue(log.logsecondassert().isDisplayed());
       System.out.println("MSG Text is Displayed");
 
 
 // Third ASSERTION to check Create your Amazon account Button is Displayed
         System.out.println("***************************************************");
         System.out.println("Third ASSERTION");
-        soft.assertTrue(driver.findElement(By.cssSelector("#createAccountSubmit")).isDisplayed(),"Third assertion Create your Amazon account Button is not Displayed ");
+        soft.assertTrue(log.logthirdassert().isDisplayed(),"Third assertion Create your Amazon account Button is not Displayed ");
         System.out.println("Create your Amazon account Button is Displayed");
 
         System.out.println("***************************************************");
         System.out.println(" Forth Assertion  using URL ");
-        soft.assertTrue(driver.getCurrentUrl().contains("https://www.amazon.ae/ap/signin"),"Forth assertion");
+        soft.assertTrue(Account.accountSecondassert(),"Forth assertion");
         System.out.println(" You still in Sign in Url ");
 
 

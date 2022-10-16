@@ -1,5 +1,6 @@
 package com.AmazonApp.testcases;
 
+import Pages.AccountListsPage;
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import com.AmazonApp.base.TestBase;
@@ -20,6 +21,8 @@ import java.util.concurrent.TimeUnit;
 
 public class AccountLists extends TestBase {
 
+    AccountListsPage Account = new AccountListsPage();
+
     public AccountLists() throws IOException {
         super();     // make run constarctor of parent
 
@@ -35,8 +38,8 @@ public class AccountLists extends TestBase {
 //        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 
-        recorder = new ATUTestRecorder("/Users/iAmira/IdeaProjects/AmazonAppProject/Videos", method.getName() , false);
-        recorder.start();
+       // recorder = new ATUTestRecorder("/Users/iAmira/IdeaProjects/AmazonAppProject/Videos", method.getName() , false);
+      //  recorder.start();
 
     }
 
@@ -45,21 +48,22 @@ public class AccountLists extends TestBase {
 
 
         TestUtils.takeScreenShot(method.getName());   // for screen shot
-        recorder.stop();        // for take video
+       // recorder.stop();        // for take video
         driver.quit();
     }
 
     @Test (priority = 3)
     public void SigninAccountO(Method method ) {
-        WebElement SigninAccount = driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"));
+
+       // WebElement SigninAccount = driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(SigninAccount).build().perform();
+        actions.moveToElement(Account.SigninAccountmove()).build().perform();
         System.out.println("you are selected  from Sign in Account & lists ");
 
-        WebElement OrderHyperlink = driver.findElement(By.xpath("//span[contains(text(),'Your Orders')]"));
-        OrderHyperlink.click();
-        System.out.println(" ou clicked on Your Order link ");
+//        WebElement OrderHyperlink = driver.findElement(By.xpath("//span[contains(text(),'Your Orders')]"));
+        Account.OrderHyperlink().click();
+        System.out.println(" You clicked on Your Order link ");
 
         // Soft Assertion
 
@@ -68,12 +72,12 @@ public class AccountLists extends TestBase {
 //multi  assertion
         System.out.println("***************************************************");
         System.out.println("first  assertion ");
-        soft.assertTrue(driver.findElement(By.xpath("//body")).isDisplayed());
+        soft.assertTrue(Account.accountfirstassert().isDisplayed());
         System.out.println("You can't see The Orders because You are not Sign in ");
 
         System.out.println("***************************************************");
         System.out.println(" second  Assertion  using URL ");
-        soft.assertTrue(driver.getCurrentUrl().contains("https://www.amazon.ae/ap/signin"),"second assertion");
+        soft.assertTrue(Account.accountSecondassert(),"second assertion");
         System.out.println(" You still in Sign in Url ");
 
         soft.assertAll();     // to show if it pass or fail
@@ -85,15 +89,15 @@ public class AccountLists extends TestBase {
 
     @Test (priority = 4)
     public void SigninAccountA(Method method) {
-        WebElement SigninAccount = driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"));
+      //  WebElement SigninAccount = driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(SigninAccount).build().perform();
+        actions.moveToElement(Account.SigninAccountmove()).build().perform();
         System.out.println("you are selected  from Sign in Account & lists ");
 
-        WebElement AddressesHyperlink = driver.findElement(By.xpath("//span[contains(text(),'Your Addresses')]"));
-        AddressesHyperlink.click();
-        System.out.println(" ou clicked on Your Addresses link ");
+//        WebElement AddressesHyperlink = driver.findElement(By.xpath("//span[contains(text(),'Your Addresses')]"));
+        Account.AddressesHyperlink().click();
+        System.out.println(" You clicked on Your Addresses link ");
 
         // Soft Assertion
 
@@ -102,12 +106,12 @@ public class AccountLists extends TestBase {
 //multi  assertion
         System.out.println("***************************************************");
         System.out.println("first  assertion ");
-        soft.assertTrue(driver.findElement(By.xpath("//body")).isDisplayed());
+        soft.assertTrue(Account.accountfirstassert().isDisplayed());
         System.out.println("You can't see The Orders because You are not Sign in ");
 
         System.out.println("***************************************************");
         System.out.println(" second  Assertion  using URL ");
-        soft.assertTrue(driver.getCurrentUrl().contains("https://www.amazon.ae/ap/signin"),"second assertion");
+        soft.assertTrue(Account.accountSecondassert(),"second assertion");
         System.out.println(" You still in Sign in Url ");
 
         soft.assertAll();     // to show if it pass or fail
@@ -118,15 +122,15 @@ public class AccountLists extends TestBase {
 
     @Test (priority = 5)
     public void SigninAccountL(Method method ) {
-        WebElement SigninAccount = driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"));
+//        WebElement SigninAccount = driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(SigninAccount).build().perform();
+        actions.moveToElement(Account.SigninAccountmove()).build().perform();
         System.out.println("you are selected  from Sign in Account & lists ");
 
-        WebElement ListsHyperlink = driver.findElement(By.xpath("//span[contains(text(),'Your Lists')]"));
-        ListsHyperlink.click();
-        System.out.println(" ou clicked on Your Lists link ");
+       // WebElement ListsHyperlink = driver.findElement(By.xpath("//span[contains(text(),'Your Lists')]"));
+        Account.ListsHyperlink().click();
+        System.out.println(" You clicked on Your Lists link ");
 
         // Soft Assertion
 
@@ -135,7 +139,7 @@ public class AccountLists extends TestBase {
 //multi  assertion
         System.out.println("***************************************************");
         System.out.println("first  assertion ");
-        soft.assertTrue(driver.findElement(By.xpath("//div[@id='wishlist-page']")).isDisplayed());
+        soft.assertTrue(Account.wishlistPAge().isDisplayed(), " first assert");
         System.out.println("You can see the screen of Lists ");
 
         System.out.println("***************************************************");

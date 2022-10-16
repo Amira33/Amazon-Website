@@ -6,11 +6,27 @@
   </listeners>
   <test thread-count="5" name=" End to End Test (failed)">
     <classes>
-      <class name="com.AmazonApp.testcases.AccountLists">
+      <class name="com.AmazonApp.testcases.TodayDealsTest">
         <methods>
-          <include name="SigninAccountO" invocation-numbers="0"/>
+          <include name="TodayDeals"/>
+          <include name="setUp"/>
+          <include name="ShitDown"/>
+        </methods>
+      </class> <!-- com.AmazonApp.testcases.TodayDealsTest -->
+      <class name="com.AmazonApp.testcases.LoginPageTest">
+        <methods>
           <include name="ShitDown"/>
           <include name="setUp"/>
+          <include name="LoginTest"/>
+        </methods>
+      </class> <!-- com.AmazonApp.testcases.LoginPageTest -->
+      <class name="com.AmazonApp.testcases.AccountLists">
+        <methods>
+          <include name="SigninAccountL"/>
+          <include name="SigninAccountA"/>
+          <include name="SigninAccountO"/>
+          <include name="setUp"/>
+          <include name="ShitDown"/>
         </methods>
       </class> <!-- com.AmazonApp.testcases.AccountLists -->
     </classes>

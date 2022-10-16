@@ -1,5 +1,6 @@
 package com.AmazonApp.testcases;
 
+import Pages.TodayDealsPage;
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import com.AmazonApp.base.TestBase;
@@ -26,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TodayDealsTest extends TestBase {
 
+    TodayDealsPage Deals = new TodayDealsPage();
 
     public TodayDealsTest() throws IOException {
         super();
@@ -51,8 +53,8 @@ public class TodayDealsTest extends TestBase {
 //        driver.manage().deleteAllCookies(); // delete all the cookies
 //        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        recorder = new ATUTestRecorder("/Users/iAmira/IdeaProjects/AmazonAppProject/Videos", method.getName() , false);
-        recorder.start();
+      //  recorder = new ATUTestRecorder("/Users/iAmira/IdeaProjects/AmazonAppProject/Videos", method.getName() , false);
+      //  recorder.start();
     }
 
 
@@ -60,18 +62,19 @@ public class TodayDealsTest extends TestBase {
     public void ShitDown(Method method) throws IOException, ATUTestRecorderException {
 
         TestUtils.takeScreenShot(method.getName());   // for screen shot
-        recorder.stop();        // for take video
+       // recorder.stop();        // for take video
         driver.quit();
     }
 
     @Test (priority = 2)
 
     public void TodayDeals(Method method) throws InterruptedException {
-        WebElement TodayDeals = driver.findElement(By.xpath("//a[contains(text(),\"Today's Deals\")]"));
-        TodayDeals.click();
+//        WebElement TodayDeals = driver.findElement(By.xpath("//a[contains(text(),\"Today's Deals\")]"));
+        Deals.TodayDealsButton().click();
         System.out.println("clicked on  TodayDealsText");
-        WebElement TodayDealsText = driver.findElement(By.xpath("//h1[contains(text(),\"Today's Deals\")]"));
-        boolean actualResult = TodayDealsText.isDisplayed();
+
+//        WebElement TodayDealsText = driver.findElement(By.xpath("//h1[contains(text(),\"Today's Deals\")]"));
+        boolean actualResult = Deals.TodayDealsText().isDisplayed();
         Assert.assertTrue(actualResult, "This TodayDeals Text is not Displayed ");
         System.out.println(" TodayDeals cheklist is Appeared ");
 
@@ -96,41 +99,43 @@ public class TodayDealsTest extends TestBase {
 
 //  another Method to select Second Category (Appliances)
 
-        List<WebElement> ctegoriesCheckBoxes = driver.findElements(By.xpath("//span[text()='Appliances']"));
+       // List<WebElement> ctegoriesCheckBoxes = driver.findElements(By.xpath("//span[text()='Appliances']"));
 
-        System.out.println("Total number of Appliances Checkboxes are :  " + ctegoriesCheckBoxes.size());
-        for (int i = 0; i < ctegoriesCheckBoxes.size(); i++)
+        System.out.println("Total number of Appliances Checkboxes are :  " + Deals.ctegoriesCheckBoxes().size());
+        for (int i = 0; i < Deals.ctegoriesCheckBoxes().size(); i++)
         {
 
-            ctegoriesCheckBoxes.get(0).click();
+            Deals.ctegoriesCheckBoxes().get(0).click();
             System.out.println(" You are choosed Second Category (Appliances) ");
 
 
      }
 
 // To choose the first Item
-     WebElement firstitem = driver.findElement(By.xpath("//div[contains(text(),\"Save on smartphone accessories\")]"));
-     firstitem.click();
-     System.out.println(" You are choosed First Item ");
+     //WebElement firstitem = driver.findElement(By.xpath("//div[contains(text(),\"Save on smartphone accessories\")]"));
+     Deals.firstitem().click();
+     System.out.println(" You are choosing First Item ");
 
 
 
  //Add it to cart with Qty = 3
 
 
-        WebElement Qty = driver.findElement( By.id("quantity"));
-        Select yearvalue = new Select(Qty);
+        //WebElement Qty = driver.findElement( By.id("quantity"));
+        Select yearvalue = new Select(Deals.Qty());
         yearvalue.selectByValue("3");
 
-        WebElement AddtocartButton = driver.findElement(By.id("add-to-cart-button"));
-        AddtocartButton.click();
-       // driver.findElement(By.id("attachSiNoCoverage")).click();    // for adding Extended Warranty Plan
+       // WebElement AddtocartButton = driver.findElement(By.id("add-to-cart-button"));
+        Deals.AddtocartButton().click();
 
-        driver.findElement(By.id("NATC_SMART_WAGON_CONF_MSG_SUCCESS")).isDisplayed();   // for confirmation MSG
+        // driver.findElement(By.id("attachSiNoCoverage")).click();    // for adding Extended Warranty Plan
+
+       // driver.findElement(By.id("NATC_SMART_WAGON_CONF_MSG_SUCCESS"))
+        Deals.ConfMSGSuccess().isDisplayed();   // for confirmation MSG
 
 
-        WebElement Gotocart = driver.findElement(By.xpath("//div[@id='nav-cart-text-container']"));
-        Gotocart.click();
+      //  WebElement Gotocart = driver.findElement(By.xpath("//div[@id='nav-cart-text-container']"));
+         Deals.Gotocart().click();
         System.out.println("You  are clicked on Cart");
 
 
@@ -144,16 +149,16 @@ public class TodayDealsTest extends TestBase {
 
         System.out.println("***************************************************");
         System.out.println("first  assertion using price");
-        soft.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'AED 111.99')]")).isDisplayed());
+        soft.assertTrue(Deals.PriceFirstassert().isDisplayed());
         System.out.println("Correct items are added (By Price)");
 
         JavascriptExecutor js  = ((JavascriptExecutor) driver);
-        js.executeScript("arguments[0].style.border='3px solid red'" ,driver.findElement(By.xpath("//span[contains(text(),'AED 111.99')]")));  // to make a red rectangular
+        js.executeScript("arguments[0].style.border='3px solid red'" ,Deals.PriceFirstassert());  // to make a red rectangular
         Thread.sleep(5000);
 
 //**************************************************************
         System.out.println("second  assertion using qty");
-        soft.assertTrue(driver.findElement(By.cssSelector("#a-autoid-0")).isDisplayed());
+        soft.assertTrue(Deals.QTYSecondassert().isDisplayed());
         System.out.println("Correct items are added (By Qty)");
 
         JavascriptExecutor js1  = ((JavascriptExecutor) driver);
@@ -163,11 +168,11 @@ public class TodayDealsTest extends TestBase {
 // *************************************************************
 
         System.out.println("third  assertion using subtotal ");
-        soft.assertTrue(driver.findElement(By.xpath("//body/div[@id='a-page']/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]")).isDisplayed());
+        soft.assertTrue(Deals.SubtotslThirdassert().isDisplayed());
         System.out.println("Correct items are added (By subtotal)");
 
         JavascriptExecutor js2  = ((JavascriptExecutor) driver);
-        js2.executeScript("arguments[0].style.border='3px solid red'" ,driver.findElement(By.xpath("//body/div[@id='a-page']/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/div[1]")));  // to make a red rectangular
+        js2.executeScript("arguments[0].style.border='3px solid red'" ,Deals.SubtotslThirdassert());  // to make a red rectangular
         Thread.sleep(5000);
 
 
